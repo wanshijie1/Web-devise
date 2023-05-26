@@ -1,0 +1,132 @@
+
+		
+		/*******************视频主页*************************/
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			position: relative;
+			width: 100%;
+			height: 100vh;
+			overflow: hidden;
+		}
+
+		.video-background {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		.video-background video {
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: auto;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.2);
+		}
+
+		.content {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			z-index: 1;
+		}
+
+		.button {
+			padding: 15px 30px;
+			font-size: 24px;
+			background-color: #fdfdfd;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			opacity: 0.1;
+			transition: opacity 0.3s ease;
+			position: relative;
+			top: 280px; /*按钮下移位置*/
+		}
+
+		.button:hover {
+			opacity: 0.8;
+		}
+		/*************************************************************/
+
+		@keyframes bg-animation {
+			0% {
+				background-position: 0 0;
+			}
+			100% {
+				background-position: 150% 0;
+			}
+		}
+
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+
+		.box {/*拟态按钮*/
+			margin: 20px;
+			padding: 20px;
+			border-radius: 30px;/*圆角*/
+			box-shadow: 0 3px 6px rgba(255, 0, 0, 0.16), 0 3px 6px rgba(51, 72, 225, 0.23);
+			text-align: center;
+			transition: transform 0.8s ease, box-shadow 0.8s ease;
+			cursor: pointer;
+			font-weight: bold;
+			color: #000000;/*按钮字体颜色*/
+			background-color: #92f7e4;
+		}
+
+		.box:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 6px 12px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.23);
+		}
+
+		img {/*图片*/
+			max-width: 50%;
+			height: auto;
+			opacity: 90%;
+			transition: opacity 0.5s ease;
+		}
+
+		.show {
+			opacity: 1;
+		}
+
+		iframe {
+			/*定义两个背景*/
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			border: none;
+		}
+
+
+		iframe.bg {
+			/*是彩色渐变*/
+			z-index: -2;
+		}

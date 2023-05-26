@@ -1,0 +1,87 @@
+.sidebar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-70%);
+  width: 200px;
+  height: 400px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: width 0.5s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.sidebar:hover {
+  width: 250px;
+}
+
+.sidebar::before {
+  content: "目录";
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  font-weight: bold;
+  font-size: 48px;
+}
+
+.sidebar::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border: 2px solid #000;
+  border-top: none;
+  border-right: none;
+  transition: transform 0.3s ease;
+}
+
+.sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 10px;
+  border-bottom: 1px solid #857a7a;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  background-color: #ec9494;
+}
+
+.sidebar:hover::before {
+  display: none;
+}
+
+.sidebar:hover::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.sidebar li {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar:hover li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sidebar ul {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.sidebar:hover ul {
+  height: auto;
+}

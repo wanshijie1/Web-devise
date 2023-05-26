@@ -1,0 +1,62 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px; /* 页眉最上方宽度*/
+    background-color: rgba(39, 38, 38, 0.249);
+    transition: background-color 0.6s;/*过度动画速率*/
+    z-index: 9999;/*确保始终位于最上方*/
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 100;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* 将导航菜单右对齐 */
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 10;
+}
+
+nav ul li a {/*top按钮部分*/
+   
+    color: #0bad0e;
+    font-size: 22px;
+    text-decoration: none;
+    border: 2px solid #8a4e5d; /* 添加按钮边框 */
+    padding: 10px 20px; /* 添加内边距以增加按钮样式 */
+    border-radius: 20px; /* 添加边框圆角 */
+    transition: border-color 0.9s; /* 添加过渡动画效果 */
+}
+
+nav ul li a:hover {
+    border-color: #ffffff; /* 修改鼠标悬停时的边框颜色 */
+    color: #ffffff; /* 修改鼠标悬停时的文字颜色 */
+    background-color: #0bad0e; /* 修改鼠标悬停时的背景颜色 */
+}
+

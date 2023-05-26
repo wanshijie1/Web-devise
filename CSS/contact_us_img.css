@@ -1,0 +1,47 @@
+
+
+  /************************************************/
+  body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #c57171;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        article {
+            padding: 20px 0;
+            border-bottom: 1px solid #c3f6c5;
+        }
+        
+        h2 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px 0;
+        }

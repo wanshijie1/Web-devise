@@ -1,0 +1,13 @@
+.slideshow {
+    width: 1000px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slideshow img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    transition: opacity 3s ease-in-out;
+}

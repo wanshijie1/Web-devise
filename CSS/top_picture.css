@@ -1,0 +1,45 @@
+.header-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .image-wrapper {
+    display: flex;
+    justify-content: flex-start; /* 将内容靠左对齐 */
+  }
+  
+  .logo1 {
+    position: fixed;
+    top: 0;
+	left: 0;
+    margin-right: 10px;
+    width: 95px; /* 设置图片宽度，可以根据需要调整数值 */
+    height: auto; /* 让高度根据宽度自动调整，保持图片比例 */
+    border-radius: 50%; /* 设置圆形边框，可以根据需要调整 */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* 添加阴影效果，可以根据需要调整 */
+    margin-right: 0px; /* 设置图片之间的水平间距，可以根据需要调整数值 */
+  }
+  
+  .logo2 {
+    position: fixed;
+    top: 0;
+	left: 0;
+    margin-right: 10px;
+    width: 90px; /* 设置图片宽度，可以根据需要调整数值 */
+    height: auto; /* 让高度根据宽度自动调整，保持图片比例 */
+    border-radius: 50%; /* 设置圆形边框，可以根据需要调整 */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* 添加阴影效果，可以根据需要调整 */
+    margin-left: 120px; /* 设置图片之间的水平间距，可以根据需要调整数值 */
+  }
+ 
+  
+  /* 可根据需要进行样式调整 */
+  h1 {
+    font-size: 24px;
+    color: #d11010;/*字体颜色*/
+  }
+  
+  nav ul li {
+    margin-right: 10px;
+  }
+  

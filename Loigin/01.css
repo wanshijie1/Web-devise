@@ -1,0 +1,77 @@
+/* 设置页面样式 */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0a2d3a, #16576e, #29b5c8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+/* 登录容器样式 */
+.container {
+  width: 400px;
+  padding: 65px;
+  padding-left: 30px;
+  padding-right: 60px;
+  background-color: #abf2c3;
+  border-radius: 80px;
+  box-shadow: 0 0 30px rgb(255, 0, 0); /* 添加阴影效果 */
+  transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: translateY(-15px); /* 悬浮时向上移动 */
+  box-shadow: 0 0 80px rgb(147, 137, 243); /* 悬浮时增加阴影模糊度和颜色 */
+}
+
+/* 标题样式 */
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* 输入框样式 */
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #f60202;
+  border-radius: 80px;
+}
+
+/* 按钮样式 */
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #5B8C6D;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* 跳过选项样式 */
+.skip {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.skip a {
+  color: #777;
+  text-decoration: none;
+}
+
+/* 验证码图像样式 */
+.captcha-image {
+  display: block;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>背景闪烁</title>
+    <style>
+      /* 定义星星和星空背景 */
+      .stars {
+        width: 3px;
+        height: 5px;
+        background: transparent;
+        box-shadow: 2px 2px #27f383, 4px 4px #4b2525, 6px 6px #cf0af1, 8px 8px #9306d5,
+          10px 10px #ef0606, 12px 12px #c86e08, 14px 14px #0aaee5, 16px 16px #ee8484,
+          18px 18px #9a9007, 20px 20px #92ce05;
+        animation: shine 1s infinite;
+        position: absolute;
+      }
+
+      .sky {    /* 天空（背景色） */
+        background: linear-gradient(to right, #b7dee7, #75ddff);
+			animation: bg-animation 10s ease infinite;
+      }
+
+      /* 定义星星闪烁动画 */
+      @keyframes shine {
+        0% {
+          opacity: 1.5;
+          transform: translateY(0);
+        }
+        50% {
+          opacity: 5;
+          transform: translateY(50px);
+        }
+        100% {
+          opacity: 0.5;
+          transform: translateY(100px);
+        }
+      }
+    </style>
+    <script>
+      // 使用 JavaScript 动态添加星星
+      function addStar() {
+        const star = document.createElement("div");
+        star.className = "stars";
+        star.style.left = Math.random() * 100 + "%";
+        star.style.top = Math.random() * 100 + "%";
+        star.style.animationDelay = Math.random() * 3 + "s";
+        document.body.appendChild(star);
+      }
+
+      // 定时添加星星
+      setInterval(addStar, 200);
+    </script>
+  </head>
+  <body>
+    <div class="sky"></div>
+  </body>
+</html>

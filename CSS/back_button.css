@@ -1,0 +1,23 @@
+.back-button {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    background-color: #bbf39f;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(227, 2, 2, 0.2);
+    opacity: 1;
+    transition: opacity 0.1s ease, transform 0.8s ease;
+  }
+  
+  .back-button:hover {
+    opacity: 0.1;
+    transform: scale(1.1);
+  }
+  
+  .back-button:active {
+    transform: scale(1.0);
+  }
+  

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../CSS/txt_mulu.css"><!-- 目录动画效果 -->
+  <link rel="stylesheet" href="../CSS/back_button.css"><!-- 返回按钮 -->
+  <link rel="stylesheet" href="../CSS/txt_1.html.css"><!--效果实现 -->
+  <script src="../JS/txt_1.html.js"></script><!-- TOP 效果实现 -->
+  <title>列表</title>
+  <style>
+    .container {
+      margin-top: 20px;
+    }
+    .textbox {
+      margin-bottom: 20px;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const sidebarLinks = document.querySelectorAll(".sidebar li");
+      sidebarLinks.forEach(function(link) {
+        link.addEventListener("click", function() {
+          const target = this.textContent.trim();
+          const targetElement = document.getElementById(target);
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="popup-container">
+    <div id="popup-box">
+      <h2>提示</h2>
+      <p>欢迎来到安徽工程大学！作为你们迈向成年人世界的第一步，入学是一个令人兴奋而又紧张的时刻。安徽工程大学向你们表示最热烈的祝贺和最诚挚的欢迎。我希望通过这篇致辞，为你们的大学生活提供一些指导和建议。</p>
+      <p>首先，要珍惜这个宝贵的机会。大学是一个知识的殿堂，你们将有机会接触到广阔而深刻的学问。抓住每一个学习机会，发掘自己的兴趣和激情。不要害怕挑战和困难，因为正是通过克服困难，你们才能不断成长和进步。</p>
+      <p>其次，要积极融入校园生活。大学是一个多元而开放的社区，有着各种各样的社团、俱乐部和活动。参与其中，结交新朋友，拓宽自己的视野。与不同背景和兴趣爱好的人交流，你们将从中学到很多宝贵的经验和智慧。同时，也要注意平衡学习和休闲的关系，充分利用校园资源，培养全面发展的个人素质。</p>
+      <p>第三，要建立良好的学习和生活习惯。大学生活相对自由，但也需要自律和自控力。制定合理的学习计划，合理安排时间，避免拖延和浪费。同时，注意保持良好的身心健康，注重锻炼和休息，保持积极乐观的心态。</p>
+      <p>最后，要时刻保持对未来的追求和目标。大学是为你们打开更广阔的世界门户的关键时期。抓住这个机会，发现自己的激情和天赋，努力学习并追求卓越。同时，要保持对社会的责任感，积极参与公益活动，为社会做出贡献。</p>
+      <p>新生们，你们是我们大家庭的新成员，我们相信你们将会在这里收获成功和成长。祝愿你们在大学的旅程中，勇往直前，获得丰富的知识和</p>
+      <button id="close-button" class="button">关闭</button>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <ul>
+      <li>1.校园网使用方法</li>
+      <li>2.体测成绩查询</li>
+      <li>3.安徽工程大学—学生手册</li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="textbox" id="1.校园网使用方法">
+      <h2>1.校园网使用方法</h2>
+      <p>安徽工程大学校园网使用指南</p>
+      <a href="text_1_urls/txt_1.html" class="button">HERE</a>
+    </div>
+    
+    <div class="textbox" id="2.体测成绩查询">
+      <h2>2.体测成绩查询</h2>
+      <p>安徽工程大学体育能力测试成绩查询</p>
+      <a href="text_1_urls/txt_2.html" class="button">HERE</a>
+    </div>
+
+    <div class="textbox" id="3.安徽工程大学—学生手册">
+      <h2>3.安徽工程大学—学生手册</h2>
+      <p>安徽工程大学—学生手册-电子版</p>
+      <a href="text_1_urls/txt_3.html" class="button">HERE</a>
+    </div>
+  </div>
+
+  <a href="javascript:history.back()" class="back-button">返回</a>
+</body>
+</html>

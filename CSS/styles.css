@@ -1,0 +1,57 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
+
+footer {
+    /*position: fixed;*/
+    left: 0;
+    bottom:00;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+    color: #bcefa6;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px; /* 自定义尾部声明的最大宽度 */
+    margin: -20 auto; /* 图片水平居中 */
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.left-section img {
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+}
+
+.right-section {
+    position:  inline-block;
+    vertical-align: middle;
+}
+
+.right-section a {
+    color: #d71e1e;
+    margin-left: 500px;
+}
+
+.right-section a.button {
+    display: inline-block;
+    padding: 100px 200px;
+    background-color: #3ac51e;
+    color: #b82f2f;
+    text-decoration: none;
+    border-radius: 50px;
+    /*margin-top: 100px;*/
+    margin-left: 100px;
+}

@@ -1,0 +1,156 @@
+/* 样式表 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    background-color: #1c5e75ae;
+  }
+
+  header {
+    background-color: #00a1d6;
+    color: #fff;
+    padding: 20px;
+  }
+
+  nav {
+    background-color: #f5f5f5;
+    padding: 10px;
+    text-align: left; /* 设置导航栏右对齐 */
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+  }
+
+  nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffcd94;
+    color: #fff;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(30, 94, 121, 0.84);
+    transition: width 0.3s ease;
+    z-index: -1;
+  }
+
+  nav ul li a:hover {
+    background-color: #ffaa00;
+  }
+
+  nav ul li a:hover::before {
+    width: 50%;
+  }
+
+  nav ul li a:active::before {
+    width: 0%;
+    transition: none;
+  }
+
+  main {
+    padding: 20px;
+  }
+/*****************************************************************/
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 50;
+    width: 100%;
+    background-color: #91f7d261;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+  }
+  
+  .footer-image-container {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .footer-image-container img {
+    width: 70px;
+    height: 70px;
+    border-radius: 80%;
+    box-shadow: 0 0 10px rgba(225, 110, 110, 0.2);/*添加一个模糊的黑色阴影，使图片看起来浮起来。*/
+    transition: box-shadow 0.3s ease;/*为图片的阴影效果添加了一个过渡效果，持续时间为0.3秒，过渡效果为缓入缓出*/
+  }
+  
+  .footer-image-container img:hover {/*当鼠标悬停在图片上时，应用新的阴影样式。*/
+    box-shadow: 0 0 20px rgb(255, 0, 0); /*当鼠标悬停时，增加阴影的模糊度，使其看起来更加突出。 */
+  }
+  
+/******************************************拟态按钮*/
+.slide {
+  position: relative; /* 设置元素为相对定位，以便在之后的绝对定位元素中定位 */
+  display: inline-block; /* 将元素显示为行内块级元素，使其在一行内显示 */
+  padding: 10px 20px; /* 设置内边距 */
+  font-size: 16px; /* 设置字体大小 */
+  border: 2px solid #2980b9; /* 添加2像素宽度的边框样式 */
+  background-color: transparent; /* 设置背景颜色为透明 */
+  color: #000000; /* 设置文字颜色 */
+  transition: transform 1.5s, box-shadow 0.8s; /* 设置过渡效果的持续时间 */
+  cursor: pointer; /* 设置光标为手型指针 */
+  border-radius: 30px; /* 添加圆角效果，将按钮边框设置为30像素 */
+  text-decoration: none; /* 删除文字的下划线 */
+}
+
+.slide::before {
+  content: ""; /* 生成伪元素的内容 */
+  position: absolute; /* 设置元素为绝对定位，相对于父级元素定位 */
+  top: 0; /* 设置伪元素距离父级元素顶部的距离为0 */
+  left: 0; /* 设置伪元素距离父级元素左侧的距离为0 */
+  width: 0; /* 初始化伪元素的宽度为0 */
+  height: 100%; /* 设置伪元素的高度为100%，与父级元素等高 */
+  background-color: #66d05e; /* 设置伪元素的背景颜色 */
+  transition: width 1.3s; /* 设置伪元素宽度变化的过渡效果的持续时间 */
+  z-index: -1; /* 将伪元素的堆叠顺序设置为低于父级元素，使其位于背后 */
+  border-radius: 30px; /* 添加圆角效果，将伪元素边框设置为30像素 */
+}
+
+.slide:hover {
+  transform: translateY(-8px); /* 当按钮被悬停时，向上移动2像素，实现按钮的微小位移效果 */
+  box-shadow: 0 4px 50px rgb(247, 0, 0); /* 当按钮被悬停时，添加阴影效果 */
+}
+
+.slide:hover::before {
+  width: 100%; /* 当按钮被悬停时，将伪元素的宽度设置为100%，实现滑动填充效果 */
+}
+
+.slide:hover span {
+  color: #ff0852; /* 当按钮被悬停时，修改文字颜色为新的值 */
+}
+
+.slide span {
+  position: relative; /* 设置元素为相对定位，使其与伪元素共享相对定位的父级 */
+  z-index: 1; /* 设置文字的堆叠顺序为高于伪元素，使其位于前面 */
+}

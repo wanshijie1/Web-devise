@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>导航</title>
+  <link rel="stylesheet" href="../CSS/txt_mulu.css"><!-- 目录动画效果 -->
+  <script src="../JS/txt_1.html.js"></script><!-- 目录效果 -->
+  <link rel="stylesheet" href="../CSS/txt_1.html.css"><!--文本框拟态效果实现 -->
+  <link rel="stylesheet" href="../CSS/back_button.css"><!-- 返回按钮 -->
+  <style>
+    body {
+      background: linear-gradient(to right, #8bc564, #ccffcc, #23b71d, #3e805a);
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .textbox {
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #eace51;
+      color: #0a5b31;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    /* 添加背景虚化效果 */
+    #popup-container {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(5px);
+      z-index: 9999;
+    }
+
+    #popup-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+    }
+  </style>
+  <script>
+    // JavaScript代码
+    window.addEventListener('DOMContentLoaded', function() {
+      var isFirstVisit = sessionStorage.getItem('isFirstVisit');
+
+      if (!isFirstVisit) {
+        var popupContainer = document.getElementById('popup-container');
+        var closeButton = document.getElementById('close-button');
+
+        popupContainer.style.display = 'block';
+
+        closeButton.addEventListener('click', function() {
+          popupContainer.style.display = 'none';
+          sessionStorage.setItem('isFirstVisit', 'true');
+        });
+      }
+    });
+
+    // 点击目录项跳转到对应文章位置
+    document.addEventListener('DOMContentLoaded', function() {
+      var sidebar = document.querySelector('.sidebar');
+      var links = sidebar.querySelectorAll('li');
+
+      links.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+          event.preventDefault();
+
+          var targetId = this.dataset.target;
+          var targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="sidebar">
+    <ul>
+      <li data-target="article1">1.中国教育考试网</li>
+      <li data-target="article2">2.安徽省乡村振兴创新创业大赛</li>
+      <li data-target="article3">3.菜鸟教程</li>
+      <li data-target="article4">4.在线模拟电路</li>
+      <li data-target="article5">5.文件格式在线转换</li>
+      <li data-target="article6">6.函数图像绘制</li>
+      <li data-target="article7">7.配色网站</li>
+      <li data-target="article8">8.科塔学术</li>
+    </ul>
+  </div>
+
+  <div id="popup-container">
+    <div id="popup-box">
+      <h2>提示</h2>
+      <p>在互联网时代，网站数量繁多，为了快速找到所需信息，一个好用的网站导航成为了必备工具。</p>
+      <p>本文将为您推荐几个功能强大、用户友好的网站导航，帮助您提高上网效率，让浏览成为一种享受。</p>
+      <button id="close-button" class="button">关闭</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="textbox" id="article1">
+      <h2>1.中国教育考试网</h2>
+      <a href="https://ncre.neea.edu.cn/" class="button">HERE</a>
+    </div>
+    
+    <div class="textbox" id="article2">
+      <h2>2.安徽省乡村振兴创新创业大赛</h2>
+      <a href="http://www.xczxcy.com.cn/login.html" class="button">HERE</a>
+    </div>
+
+    <div class="textbox" id="article3">
+      <h2>3.菜鸟教程</h2>
+      <p>学的不仅是技术，更是梦想！</p>
+      <a href="https://www.runoob.com/" class="button">HERE</a>
+    </div>
+
+    <div class="textbox" id="article4">
+      <h2>4.在线模拟电路</h2>
+      <p>在线模拟电路，自定义电器元件等</p>
+      <a href="http://scratch.trtos.com/circuitjs.html" class="button">HERE</a>
+    </div>
+
+    <div class="textbox" id="article5">
+      <h2>5.文件格式在线转换</h2>
+      <p>提供多种文件的格式转换，包括PDF、视频、音频等</p>
+      <a href="https://www.aconvert.com/" class="button">HERE</a>
+    </div>
+
+    <div class="textbox" id="article6">
+      <h2>6.函数图像绘制</h2>
+      <p>帮助每一位学生学习数学并爱上数学</p>
+      <a href="https://www.desmos.com/calculator?lang=zh-CN" class="button">HERE</a>
+    </div>
+
+    <div class="textbox" id="article7">
+      <h2>7.配色网站</h2>
+      <p>再也不会浪费时间寻找完美的调色板了！只需输入一种颜色！</p>
+      <a href="https://mycolor.space/" class="button">HERE</a>
+    </div>
+
+    <div class="textbox" id="article8">
+      <h2>8.科塔学术</h2>
+      <p>科塔学术致力于成为国内领先的科研与学术资源导航平台</p>
+      <a href="https://site.sciping.com/" class="button">HERE</a>
+    </div>
+  </div>
+
+  <a href="javascript:history.back()" class="back-button">返回</a>
+</body>
+</html>

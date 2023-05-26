@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>湖景</title>
+    <!-- 引用两个js -->
+    <script src="../../JS/panolens.min.js"></script>
+    <script src="../../JS/three.min.js"></script>
+    <script src="../../JS/panolens.min.js"></script>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+        }
+        #container {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- 容器用于放置全景图 -->
+    <div id="container"></div>
+    <!-- 引入Panolens插件的JavaScript文件 -->
+    <script>
+        // 初始化容器和部分设置
+        let viewer = new PANOLENS.Viewer({
+            container: document.querySelector('#container'), // 将全景图容器设置为指定的<div>元素
+            controlButtons: ['fullscreen', 'setting', 'video'], // 控制按钮的显示
+            autoRotate: true, // 开启自动旋转
+            autoRotateActivationDuration: 2000, // 自动旋转的激活时长
+            autoRotateSpeed: 0.3 // 自动旋转的速度
+        });
+
+        // 加入图片（图片地址要是线上地址）,也可以是服务器端的相对路径，最好在相同文件夹下
+        let panorama = new PANOLENS.ImagePanorama('03.jpg');
+        // 把图片放在容器里
+        viewer.add(panorama);
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,57 @@
+
+body {
+background: linear-gradient(to right, #bdcf91, #74d774, #69f152, #c4f5af);
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+}
+
+.container {
+max-width: 800px;
+margin: 0 auto;
+padding: 20px;
+}
+
+.textbox {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 16px rgba(52, 52, 52, 0.8); /* 添加阴影效果 */
+    border-radius: 40px; /* 添加圆角效果 */
+  }
+  
+
+.button {
+display: inline-block;
+padding: 10px 20px;
+background-color: #ff9999;
+color: #ffffff;
+text-decoration: none;
+border-radius: 5px;
+}
+
+/* 添加背景虚化效果 */
+#popup-container {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+backdrop-filter: blur(5px);
+z-index: 9999;
+}
+
+#popup-box {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #fff;
+padding: 20px;
+border-radius: 5px;
+text-align: center;
+}
+
+

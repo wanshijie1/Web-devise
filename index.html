@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+	<title>校园导航</title>
+	<link rel="stylesheet" href="CSS/styles.css"><!-- 尾部申明 -->
+	<link rel="stylesheet" href="CSS/top.css"><!-- TOP -->
+	<link rel="stylesheet" href="CSS/phone.css"><!-- 使用响应式设计调整也页面大小，目前好像不起作用 -->
+	<link rel="stylesheet" href="CSS/lunbo.css"><!-- 图片轮播效果 -->
+	<link rel="stylesheet" href="CSS/footer_style.css"><!-- 底部声明效果 -->
+	<link rel="stylesheet" href="CSS/top_picture.css"><!-- top图片 -->
+	<link rel="stylesheet" href="CSS/index.css"><!-- 视频主页 -->
+	<script src="JS/script.js"></script><!-- TOP 半透明 -->
+	<script src="JS/button_1.js"></script><!-- 开始按钮平滑过度 -->
+
+	<style>
+
+	</style>
+	<iframe class="bg" src="html-s/background.html"></iframe>
+</head>
+
+<body>
+	<header id="header">
+		<!-- 页眉 -->
+		<div class="header-wrapper">
+			<img src="Images/AHPU_hui.png" alt="Image 1" class="logo1">
+			<h1>AHPU-stu😶‍🌫️</h1>
+			<nav>
+				<ul>
+					
+					<li><a href="html-s/about.html">关于</a></li>
+					<li><a href="html-s/fuwu.html">申明</a></li>
+					<li><a href="html-s/contact us.html">联系</a></li>
+					<li><a href="Loigin/login.html">登陆</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div class="container">
+		<div class="video-background">
+			<video autoplay loop muted>
+				<source src="MP4/AHPU.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="overlay"></div>
+	</div>
+
+	<section id="next-section">
+		<div class="container">
+			<div class="box">
+				<h2>校园官方网站</h2>
+				<button class="neu-btn" onclick="window.location.href='html-s/Campus website.html'">✨</button>
+			</div>
+
+			<div class="box">
+				<h2>入学指南</h2>
+				<button class="neu-btn" onclick="window.location.href='html-s/text_1.html'">✨</button>
+			</div>
+
+			<div class="box">
+				<h2>网站导航</h2>
+				<button class="neu-btn" onclick="window.location.href='html-s/Site navigation.html'">✨</button>
+			</div>
+
+			<div class="box">
+				<h2>微程景观</h2>
+				<button class="neu-btn" onclick="window.location.href='3/main.html'">✨</button>
+			</div>
+
+		</div>
+	</section>
+
+	<div class="container">
+		<img src="Images/AHPU.jpg" alt="图片2">
+		<img src="Images/AHPU_9J.jpg" alt="图片3">
+	</div>
+
+	<script>
+		let images = document.querySelectorAll('img');
+		let current = 0;
+
+		setInterval(function() {
+			images[current].classList.remove('show');
+			current = (current + 1) % images.length;
+			images[current].classList.add('show');
+		}, 5000);
+	</script>
+
+	
+
+	<footer class="footer">
+		<h1>技术团队</h1>
+		<div class="footer-content">
+			<div class="left-section">
+				<img src="Images/WAN.jpg" alt="Image 1">
+				<img src="Images/LIU.jpg" alt="Image 2"><br><br>
+			</div>
+		</div>
+		<a href="https://qm.qq.com/cgi-bin/qm/qr?k=ZjykOj9q2auLVERfTGjxd6S4P6yx8T6r&noverify=0&personal_qrcode_source=3">©万</a><br>
+		<a href="https://qm.qq.com/cgi-bin/qm/qr?k=rB5ugN4vaYsBRsHPm1fWcjyPyctceRVU&noverify=0&personal_qrcode_source=3">©刘</a>
+
+		<li><a href="https://beian.miit.gov.cn/">皖ICP备 2022016 704号-1</a></li>
+	</footer>
+
+</body>
+</html>
